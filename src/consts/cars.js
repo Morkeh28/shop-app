@@ -1,10 +1,10 @@
-const plants = [
+const cars = [
   {
     id: 1,
     name: 'Toyota Tacoma',
     price: '35000.00',
     like: true,
-    img: require('../assets/plant1.png'),
+    img: require('../assets/tacoma.png'),
     about:
       ' 3.5l v6 with 4x4. boasts of good power, strong reliability and good resale value.',
   },
@@ -14,7 +14,7 @@ const plants = [
     name: 'Toyota Tundra',
     price: '45000.00',
     like: false,
-    img: require('../assets/plant2.png'),
+    img: require('../assets/tundra.png'),
     about:
       '5.7l iforce v8 with 4x4. spacious cabin, reliable and has good resale value.',
   },
@@ -23,7 +23,7 @@ const plants = [
     name: 'Dodge Ram 1500',
     price: '47000.00',
     like: false,
-    img: require('../assets/plant3.png'),
+    img: require('../assets/ram.png'),
     about:
       '5.6l hemi v8 with 4x4. Boasts of powerful torque, spacious cabin and good horsepower.  .',
   },
@@ -33,7 +33,7 @@ const plants = [
     name: 'Ford F150',
     price: '55000.00',
     like: true,
-    img: require('../assets/plant4.png'),
+    img: require('../assets/f150.png'),
     about:
       '5.6l v8 with 4x4. industry best full size truck with good power and technology.',
   },
@@ -42,7 +42,7 @@ const plants = [
     name: 'Chevrolet Silverado',
     price: '46000.00',
     like: true,
-    img: require('../assets/plant5.png'),
+    img: require('../assets/silverado.png'),
     about:
       '5.6l v8 with 4x4. spacious cabin with decent power and torque.',
   },
@@ -51,10 +51,10 @@ const plants = [
     name: 'Nissan Frontier',
     price: '30000.00',
     like: false,
-    img: require('../assets/plant6.png'),
+    img: require('../assets/frontier.png'),
     about:
       '4.0l v6 with 4x4. powerful midsize truck with a lot of capabilities.',
   },
 ];
 
-export default plants;
+export default cars;
