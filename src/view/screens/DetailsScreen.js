@@ -4,20 +4,20 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import COLORS from '../../consts/colors';
 
 const DetailsScreen = ({navigation, route}) => {
-  const plant = route.params;
+  const cars = route.params;
 
   return (
     <SafeAreaView
       style={{
         flex: 1,
-        backgroundColor: COLORS.white,
+        backgroundColor: COLORS.aqua,
       }}>
       <View style={style.header}>
         <Icon name="arrow-back" size={28} onPress={() => navigation.goBack()} />
         <Icon name="shopping-cart" size={28} />
       </View>
       <View style={style.imageContainer}>
-        <Image source={plant.img} style={{resizeMode: 'contain', flex: 1}} />
+        <Image source={cars.img} style={{resizeMode: 'contain', flex: 1}} />
       </View>
       <View style={style.detailsContainer}>
         <View
@@ -37,7 +37,7 @@ const DetailsScreen = ({navigation, route}) => {
             justifyContent: 'space-between',
             alignItems: 'center',
           }}>
-          <Text style={{fontSize: 22, fontWeight: 'bold'}}>{plant.name}</Text>
+          <Text style={{fontSize: 22, fontWeight: 'bold'}}>{cars.name}</Text>
           <View style={style.priceTag}>
             <Text
               style={{
@@ -46,7 +46,7 @@ const DetailsScreen = ({navigation, route}) => {
                 fontWeight: 'bold',
                 fontSize: 16,
               }}>
-              ${plant.price}
+              ${cars.price}
             </Text>
           </View>
         </View>
@@ -59,7 +59,7 @@ const DetailsScreen = ({navigation, route}) => {
               lineHeight: 22,
               marginTop: 10,
             }}>
-            {plant.about}
+            {cars.about}
           </Text>
           <View
             style={{

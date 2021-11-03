@@ -11,7 +11,7 @@ import {
 import {TextInput, TouchableOpacity} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import COLORS from '../../consts/colors';
-import plants from '../../consts/plants';
+import cars from '../../consts/plants';
 const width = Dimensions.get('window').width / 2 - 30;
 
 const HomeScreen = ({navigation}) => {
@@ -40,11 +40,11 @@ const HomeScreen = ({navigation}) => {
     );
   };
 
-  const Card = ({plant}) => {
+  const Card = ({cars}) => {
     return (
       <TouchableOpacity
         activeOpacity={0.8}
-        onPress={() => navigation.navigate('Details', plant)}>
+        onPress={() => navigation.navigate('Details', cars)}>
         <View style={style.card}>
           <View style={{alignItems: 'flex-end'}}>
             <View
@@ -54,14 +54,14 @@ const HomeScreen = ({navigation}) => {
                 borderRadius: 20,
                 justifyContent: 'center',
                 alignItems: 'center',
-                backgroundColor: plant.like
+                backgroundColor: cars.like
                   ? 'rgba(245, 42, 42,0.2)'
                   : 'rgba(0,0,0,0.2) ',
               }}>
               <Icon
                 name="favorite"
                 size={18}
-                color={plant.like ? COLORS.red : COLORS.black}
+                color={cars.like ? COLORS.red : COLORS.black }
               />
             </View>
           </View>
@@ -72,13 +72,13 @@ const HomeScreen = ({navigation}) => {
               alignItems: 'center',
             }}>
             <Image
-              source={plant.img}
+              source={cars.img}
               style={{flex: 1, resizeMode: 'contain'}}
             />
           </View>
 
           <Text style={{fontWeight: 'bold', fontSize: 17, marginTop: 10}}>
-            {plant.name}
+            {cars.name}
           </Text>
           <View
             style={{
@@ -87,13 +87,13 @@ const HomeScreen = ({navigation}) => {
               marginTop: 5,
             }}>
             <Text style={{fontSize: 19, fontWeight: 'bold'}}>
-              ${plant.price}
+              ${cars.price}
             </Text>
             <View
               style={{
                 height: 25,
                 width: 25,
-                backgroundColor: COLORS.green,
+                backgroundColor: COLORS.red,
                 borderRadius: 5,
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -113,12 +113,12 @@ const HomeScreen = ({navigation}) => {
       style={{flex: 1, paddingHorizontal: 20, backgroundColor: COLORS.white}}>
       <View style={style.header}>
         <View>
-          <Text style={{fontSize: 25, fontWeight: 'bold'}}>Welcome to</Text>
-          <Text style={{fontSize: 38, color: COLORS.green, fontWeight: 'bold'}}>
+          <Text style={{fontSize: 25, color: COLORS.blue ,  fontWeight: 'bold'}}>Welcome to</Text>
+          <Text style={{fontSize: 38, color: COLORS.aqua, fontWeight: 'bold'}}>
             TACOMORKS CAR SHOP
           </Text>
         </View>
-        <Icon name="shopping-cart" size={28} />
+        <Icon name="shopping-cart" size={30} />
       </View>
       <View style={{marginTop: 30, flexDirection: 'row'}}>
         <View style={style.searchContainer}>
@@ -138,9 +138,9 @@ const HomeScreen = ({navigation}) => {
           paddingBottom: 50,
         }}
         numColumns={2}
-        data={plants}
+        data={cars}
         renderItem={({item}) => {
-          return <Card plant={item} />;
+          return <Card cars={item} />;
         }}
       />
     </SafeAreaView>
