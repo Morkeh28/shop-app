@@ -17,7 +17,7 @@ const width = Dimensions.get('window').width / 2 - 30;
 const HomeScreen = ({navigation}) => {
   const [catergoryIndex, setCategoryIndex] = React.useState(0);
 
-  const categories = ['POPULAR', 'ORGANIC', 'INDOORS', 'SYNTHETIC'];
+  const categories = ['SUV', 'SEDAN', 'TRUCKS', 'VANS'];
 
   const CategoryList = () => {
     return (
@@ -115,7 +115,7 @@ const HomeScreen = ({navigation}) => {
         <View>
           <Text style={{fontSize: 25, fontWeight: 'bold'}}>Welcome to</Text>
           <Text style={{fontSize: 38, color: COLORS.green, fontWeight: 'bold'}}>
-            Plant Shop
+            TACOMORKS CAR SHOP
           </Text>
         </View>
         <Icon name="shopping-cart" size={28} />
